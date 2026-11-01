@@ -1,6 +1,6 @@
 # WCAG-audit van TrainMore
 
-Door Younes El Kharraz, 1 november 2026.
+
 
 ## Inhoudsopgave
 
