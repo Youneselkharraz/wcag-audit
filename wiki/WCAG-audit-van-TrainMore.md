@@ -168,4 +168,3 @@ Verbeterpunten:
 - [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
 - [The A11Y Project checklist](https://www.a11yproject.com/checklist/)
 - [PageSpeed Insights (Lighthouse)](https://pagespeed.web.dev/)
-- Voorbeeld van de opzet: [WCAG-audit van OBA Postjesweg](https://github.com/S2108887/wcag-audit/wiki/WCAG%E2%80%90audit-van-OBA-Postjesweg)
