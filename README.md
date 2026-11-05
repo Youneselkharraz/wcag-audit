@@ -5,31 +5,31 @@ Doe een WCAG audit op een bestaande website uit je eigen omgeving en rapporteer 
 De instructies van deze opdracht staan in [WIKI](https://github.com/fdnd-task/wcag-audit/wiki).
 
 
-## TrainMore
+## Veldverkenner – Bloemenveld Frankendael
 
-Ik heb de website van sportschool **TrainMore** getest: [trainmore.com/en-NL](https://trainmore.com/en-NL/). Het is de website van een sportketen met clubs in onder andere Amsterdam, Den Haag en Utrecht. Bezoekers kunnen er een lidmaatschap afsluiten, een gratis proefles aanvragen en clubs en lessen bekijken. Ik heb de homepage in de Engelse versie getest.
+Ik heb mijn eigen website getest: de **Veldverkenner** voor Bloemenveld Frankendael: [youneselkharraz.github.io/the-client-website](https://youneselkharraz.github.io/the-client-website/). Het is een mobiele webapp voor een bloemenveld in Park Frankendael (Amsterdam-Oost). Bezoekers kunnen er de kaart van het bloemenveld bekijken en in de plantencollectie zien welke planten er staan.
 
-![De homepage van TrainMore](afbeeldingen/trainmore-homepage.jpg)
+![De Veldverkenner: bovenaan de kaart van het bloemenveld, daaronder de plantencollectie](afbeeldingen/01-veldverkenner-homepage.png)
 
 ### Lighthouse Accessibility
 
-Lighthouse (versie 13.6.0, via PageSpeed Insights, desktop) geeft de homepage **92** voor Toegankelijkheid.
+Lighthouse (in Chrome DevTools) geeft de pagina **87** voor Toegankelijkheid en **85** voor Performance.
 
-![Het Lighthouse Accessibility testresultaat van TrainMore: 92](afbeeldingen/lighthouse-accessibility-score.jpg)
+![Het Lighthouse testresultaat van de Veldverkenner: Toegankelijkheid 87](afbeeldingen/02-lighthouse-score.png)
 
 ### Samenvatting van de testbevindingen
 
-De homepage is op veel punten goed toegankelijk: alle afbeeldingen hebben een alt-tekst, de koppen staan in een logische volgorde, de tabvolgorde van het menu klopt en de menulinks hebben een zichtbare focus.
+De pagina is op veel punten goed toegankelijk: alle afbeeldingen hebben een alt-tekst, de taal is goed ingesteld (`lang="nl"`), de tabvolgorde klopt en elke link heeft een zichtbare focus.
 
 De belangrijkste problemen:
 
-1. **Te laag contrast** (WCAG 1.4.3): de footerlinks halen 2,49 : 1 en de rode knoppen "Join now" en "Find your club" 4,01 : 1. Nodig is 4,5 : 1.
-2. **Knoppen zonder naam** (WCAG 4.1.2): onder andere de pijlknoppen van de carrousel hebben geen tekst.
-3. **Geen duidelijke focusrand** bij de knop "Join now" (WCAG 2.4.7).
-4. **Geen skip-link** om het menu over te slaan (WCAG 2.4.1).
-5. **Alt-teksten** die een bestandsnaam zijn, zoals `NexLevelClasses_desktop.webp` (WCAG 1.1.1).
+1. **Te laag contrast** (WCAG 1.4.3): de Latijnse plantnamen en de kop "Alle planten" halen 2,80 : 1. Nodig is 4,5 : 1.
+2. **Kapotte links** in het menu: "Home" en "Nieuws" geven een 404.
+3. **Overgeslagen kopniveau** (WCAG 1.3.1): na de h1 komen meteen h3-koppen.
+4. **De titel "Verkennen"** staat alleen in de CSS en is geen echte kop.
+5. **De alt-tekst van de kaart** is erg kort en zegt niet wat er op de kaart staat (WCAG 1.1.1).
 
-De volledige documentatie met alle tests, screenshots en verbeterpunten staat in mijn Wiki: [WCAG-audit van TrainMore](https://github.com/Youneselkharraz/wcag-audit/wiki).
+De volledige documentatie met alle tests, screenshots en verbeterpunten staat hier: [WCAG-audit van de Veldverkenner](wiki/WCAG-audit-van-de-Veldverkenner.md).
 
 ## Licentie
 
