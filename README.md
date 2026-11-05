@@ -1,14 +1,63 @@
-Lighthouse-test – Veldverkenner Bloemenveld Frankendael
-Link: https://youneselkharraz.github.io/the-client-website/#kaart
+The Client - Website
 
-Performance: 85 · Accessibility: 87 
+Ontwerp en maak een website voor een opdrachtgever en bespreek het resultaat tijdens de Sprint Review.
 
-De website behaalde een Accessibility-score van 87 en een Performance-score van 85. Beide scores vallen in het oranje gebied (50–89). Dat betekent dat Lighthouse een paar aandachtspunten heeft gevonden.
+De instructie van deze leertaak staan in de WIKI
 
-Verbeterpunten:
+Live website: https://youneselkharraz.github.io/the-client-website/
 
-Contrast: De Latijnse plantnamen (<p class="latijn">), zoals Lamium album, Achillea millefolium en Oenothera biennis, hebben te weinig contrast met de lichte achtergrond. De lichte olijfkleur is daardoor slecht leesbaar, vooral voor mensen die minder goed zien. Volgens WCAG moet normale tekst een contrast van minimaal 4.5:1 hebben.
-Oplossing: de tekstkleur van .latijn donkerder maken en daarna controleren met de contrastchecker in Chrome DevTools.
-Performance: De pagina laadt redelijk snel, maar haalt nog geen 90. Afbeeldingen kleiner maken en comprimeren kan de laadtijd verbeteren.
+<img src="docs/website-plantencollectie.png" alt="De Veldverkenner op een groot scherm: bovenaan de kaart van het bloemenveld, daaronder de plantencollectie">
+Inhoudsopgave Readme
+Beschrijving
+Gebruik
+Kenmerken
+Toegankelijkheid
+Bronnen
+Licentie
+Beschrijving
 
-Conclusie: Het belangrijkste toegankelijkheidsprobleem is het lage contrast van de Latijnse plantnamen. Na het aanpassen van de kleur voer ik de Lighthouse-test opnieuw uit om te controleren of de score verbetert.
+Veldverkenner is een mobiele webapp voor Bloemenveld Frankendael in Park Frankendael (Amsterdam-Oost). De opdrachtgever wil groene kennis delen en de omgeving groener maken. Bezoekers worden uitgenodigd om de tuin actief te beleven, te ontdekken en te gebruiken.
+
+Bezoekers scannen een QR-code en kunnen direct aan de slag, zonder in te loggen.
+
+Wat kun je ermee?
+
+De kaart van het bloemenveld bekijken.
+In de plantencollectie zien welke planten er staan, met foto, naam, Latijnse naam en een korte beschrijving.
+
+Opdrachtgever: Bloemenveld Frankendael, contactpersoon Joost.
+
+Gebruik
+
+De webapp is gemaakt voor de telefoon. Bovenaan staat de kaart, die je zijwaarts kunt scrollen. Daaronder staat de plantencollectie. Met het menu onderin spring je tussen de kaart en de collectie.
+
+<img src="docs/mobiel-kaart.jpg" alt="De kaart van het bloemenveld op een telefoon" width="250"> <img src="docs/mobiel-collectie.jpg" alt="De plantencollectie op een telefoon" width="250">
+
+Kenmerken
+
+HTML
+
+Semantische structuur met main, article en nav.
+Elk plantenkaartje is een article met een afbeelding, kop, Latijnse naam en beschrijving.
+Alle afbeeldingen hebben een alt-tekst.
+
+CSS
+
+Mobile first, met één media query voor grotere schermen.
+Custom properties voor de kleuren uit de stijlgids.
+CSS Grid voor de plantenkaartjes en de navigatie onderin.
+position: sticky voor de titel op de kaart en position: fixed voor de navigatie.
+
+Nog uit te werken
+
+Zones op de kaart (Zuid, Midden en Noord) met alle paden zichtbaar.
+Een interactieve kaartlaag met per plant wat je ermee kunt doen: ruiken, voelen, iets mee maken of een bijzondere eigenschap.
+Een collectiefunctie voor het verzamelen van planten of locaties, pas nadat de webapp compleet is.
+De vier kleuren van de opdrachtgever voor de huisstijl.
+Toegankelijkheid
+
+Ik heb een WCAG-audit gedaan met Lighthouse, het toetsenbord en de ontwikkelaarstools. Lighthouse geeft de pagina 87 voor Toegankelijkheid en 85 voor Performance.
+
+<img src="docs/lighthouse-scores.png" alt="Lighthouse-scores: Performance 85 en Accessibility 87" width="400">
+
+Het belangrijkste verbeterpunt is het contrast van de Latijnse plantnamen (2,80 : 1, en het moet minstens 4,5 : 1 zijn).
